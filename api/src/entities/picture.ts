@@ -9,7 +9,7 @@ export class Picture {
     @Column({ default: ''})
     title: string
 
-    @Column({ default: ''})
+    @Column({ default: 'unknown'})
     type: string
 
     @Column({ default: '' })
