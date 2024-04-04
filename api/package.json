@@ -1,0 +1,21 @@
+{
+  "name": "tagger-api",
+  "version": "1.0.0",
+  "description": "Tagger-service backend.",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kot",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.4",
+    "typescript": "^5.4.3"
+  }
+}
