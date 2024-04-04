@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use('/tags', tagsRouter);
 
+app.use(express.json());
+
 dataSource
   .initialize()
   .then(() => {
