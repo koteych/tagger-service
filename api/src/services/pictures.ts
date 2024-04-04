@@ -8,7 +8,11 @@ export class PictureService {
     }
 
     async getAll(): Promise<Picture[]> {
-        return this.pictureRepository.find();
+        return this.pictureRepository.find({
+            relations: {
+                tags: true,
+            },
+        });
     }
 
     async createPicture(name: string): Promise<Picture> {
