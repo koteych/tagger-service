@@ -1,8 +1,11 @@
 import express, { Request, Response } from 'express';
 import { dataSource } from './config/db'
+import tagsRouter from './controllers/tags'
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use('/tags', tagsRouter);
 
 dataSource
   .initialize()
