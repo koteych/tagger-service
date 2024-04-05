@@ -27,15 +27,16 @@ const addTag = async (req: Request, res: Response) => {
     return res.send({ok: 200});
 }
 
-router.post('/:id/add-tag/:tid', asyncHandler(addTag))
-
-router.post('/:id/remove-tag/:tid', async (req: Request, res: Response) => {
+const removeTag = async (req: Request, res: Response) => {
     const pictureId = Number(req.params.id);
     const tagId     = Number(req.params.tid);
 
     pictureService.removeTag(pictureId, tagId);
     return res.send({ok: 200});;
-})
+}
+
+router.post('/:id/add-tag/:tid',    asyncHandler(addTag))
+router.post('/:id/remove-tag/:tid', asyncHandler(removeTag))
 
 
 export default router;
