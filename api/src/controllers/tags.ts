@@ -12,4 +12,25 @@ router.get('/', async (req: Request, res: Response) => {
     return res.send(await tagService.getAll());
 })
 
+router.get('/:id', async (req: Request, res: Response) => {
+    return res.send(await tagService.getAll());
+})
+
+router.post('/', async (req: Request, res: Response) => {
+    res.send('ok');
+})
+
+router.put('/:id', async (req: Request, res: Response) => {
+    res.send(req.params.id);
+})
+
+router.delete('/:id', async (req: Request, res: Response) => {
+    res.send(req.params.id);
+});
+
+// Get all entities annotated by this tag (?type=picture)
+router.get('/:id/entities', async (req: Request, res: Response) => {
+    res.send(req.params.id);
+})
+
 export default router;
